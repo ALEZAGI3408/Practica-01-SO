@@ -1,1 +1,0 @@
-# Practica-01-SO
