@@ -1,13 +1,42 @@
 Practica 01 - Procesos Par
 
-Contiene una implementación de ejemplo del mecanismo de "Proceso Par"
-para Windows, usando MSYS2 + GCC y llamadas al sistema Win32.
+Este repositorio contiene la implementación del mecanismo de Proceso Par para 
+los sistemas operativos **Windows** y **Linux**, cumpliendo con los requisitos 
+establecidos en la práctica.
 
 Estructura:
 
 Practica-01-SO/
-  windows/
-    src/       -> Código fuente (.c) y Makefile
-    include/   -> Archivos de encabezado (.h)
-    lib/       -> Objetos y ejecutables generados
-    readme.txt -> Instrucciones de uso
+│
+├── windows/     → Implementación completa para Windows (MSYS2 + GCC)
+│   ├── src/
+│   ├── include/
+│   ├── lib/
+│   └── readme.txt
+│
+├── linux/       → Implementación completa para Linux (POSIX + GCC)
+│   ├── src/
+│   ├── include/
+│   ├── lib/
+│   └── readme.txt
+│
+└── readme.txt   → Este archivo
+
+Contenido del proyecto:
+-----------------------
+
+Cada plataforma contiene:
+
+- Una implementación propia del API:
+    - lanzarProcesoPar()
+    - enviarMensajeProcesoPar()
+    - establecerFuncionDeEscucha()
+    - destruirProcesoPar()
+
+- Un archivo de encabezados común: `ProcesoPar.h`
+
+- Un proceso hijo (`child`) que se comunica con el padre vía tuberías
+
+- Un programa demostración (`proceso_par_demo` / `proceso_par_demo.exe`)
+
+- Un Makefile para compilar desde cada plataforma
