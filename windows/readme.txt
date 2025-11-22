@@ -5,6 +5,23 @@ Requisitos:
 - MSYS2 (https://www.msys2.org/)
 - Paquetes: mingw-w64-x86_64-gcc, mingw-w64-x86_64-make
 
+Estructura:
+
+windows/
+    include/
+      ProcesoPar.h
+    src/
+      lanzarProcesoPar.c
+      enviarMensajeProcesoPar.c
+      establecerFuncionDeEscucha.c
+      destruirProcesoPar.c
+      main.c        // demo del proceso par
+      child.c       // proceso hijo de prueba
+      Makefile
+    lib/
+      (aquí se genera proceso_par_demo.exe al hacer make)
+    readme.txt
+
 Pasos básicos:
 
 1. Abrir "MSYS2 MINGW64".
